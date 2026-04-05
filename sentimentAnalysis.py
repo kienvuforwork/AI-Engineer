@@ -1,17 +1,8 @@
 import pandas as pd
-import numpy as np
 import re
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt
-import transformers
 from transformers import pipeline
-from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
-from sklearn.model_selection import train_test_split
-from sklearn import metrics
-from itertools import chain
-from nltk import NaiveBayesClassifier
 
 data = pd.read_csv("book_reviews_sample.csv")
 data["reviewText_clean"] = data["reviewText"].str.lower()
